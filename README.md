@@ -6,3 +6,11 @@ This is a password generator created with the intent of allowing users to genera
 # Screenshot
 
 # URL
+
+
+
+
+
+
+
+Starter code created and given by edEx Bootcamps through UW Extended Campus.
