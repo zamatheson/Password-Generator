@@ -17,10 +17,9 @@ function writePassword() {
 
 };
 
-
-
 // generate password:
 function generatePassword() {
+  console.log("Let's generate a password!");
     // variable for character prompt... and an alert when incorrect amount is chosen:
     var charAmount = parseInt(prompt("How many characters between 8-128 would you like your password to have?"));
     if (charAmount < 8 || charAmount > 128 || charAmount === "") {
@@ -34,11 +33,9 @@ function generatePassword() {
     var numbers = confirm("Would you like to include NUM83R5 in your password?");
     var special = confirm("Would you like to include $peci@l characters in your password?");
 
-  console.log("Let's generate a password!");
-
 // if this character is chosen, then it will be added:
   if (uppercase = ("Would you like to include UPPERCASE lettes in your password?")) {
-    result = result.concat(uppercaseChar);
+    result = result.concat(uppercaseChar); 
   }
 
   if (lowercase = ("Would you like to use lowercase letters in your password?")) {
