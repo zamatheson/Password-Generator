@@ -1,9 +1,9 @@
 // variables:
 var generateBtn = document.querySelector("#generate");
-  var uppercaseChar = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
-  var lowercaseChar = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
-  var numberChar = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
-  var specialChar = ("@", "%", "$", "#", "^", "*", "&", "(", ")", "-", "_", "=", "+", "!", "+");
+  var uppercaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lowercaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numberChar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  var specialChar = ["@", "%", "$", "#", "^", "*", "&", "(", ")", "-", "_", "=", "+", "!", "+"];
   var result = [];
   var userChoiceArray = [];
 
@@ -19,12 +19,13 @@ function writePassword() {
 
 // generate password:
 function generatePassword() {
+  userChoiceArray = [];
   console.log("Let's generate a password!");
     // variable for character prompt... and an alert when incorrect amount is chosen:
     var charAmount = parseInt(prompt("How many characters between 8-128 would you like your password to have?"));
     if (charAmount < 8 || charAmount > 128 || charAmount === "") {
       alert("The password length you have entered is invalid. Please enter a new character limit.")
-      return charAmount;
+      return "Password is Invalid";
     }
   
   // variables for character prompts:
@@ -33,20 +34,25 @@ function generatePassword() {
     var numbers = confirm("Would you like to include NUM83R5 in your password?");
     var special = confirm("Would you like to include $peci@l characters in your password?");
 
+  if (!uppercase && !lowercase && !numbers && !special) {
+    alert("Please select at least one character type.");
+    return "Password is Invalid";
+  }
 // if this character is chosen, then it will be added:
-  if (uppercase = ("Would you like to include UPPERCASE lettes in your password?")) {
+  var result = [];
+  if (uppercase) {
     result = result.concat(uppercaseChar); 
   }
 
-  if (lowercase = ("Would you like to use lowercase letters in your password?")) {
+  if (lowercase) {
     result = result.concat(lowercaseChar);
   }
 
-  if (numbers = ("Would you like to include NUM83R5 in your password?")) {
+  if (numbers) {
     result = result.concat(numberChar);
   }
 
-  if (special = ("Would you like to include $peci@l characters in your password?")) {
+  if (special) {
     result = result.concat(specialChar);
   }
   
