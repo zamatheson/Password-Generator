@@ -7,8 +7,7 @@ This is a password generator created with the intent of allowing users to genera
 <img width="1344" alt="Screenshot 2023-09-25 at 9 41 29 PM" src="https://github.com/zamatheson/Password-Generator/assets/140024933/c25393d4-9bc9-4c87-bb90-921a7159d0bf">
 
 # URL
-[
-](https://zamatheson.github.io/Password-Generator/)
+[ (https://zamatheson.github.io/Password-Generator/) ]
 
 
 
